@@ -1,0 +1,32 @@
+﻿@page
+@model StockAPI_Razor.Pages.BrokerCompany.GetAllBrokersModel
+@{
+    ViewBag.Title = "All Brokers";
+}
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Password</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Brokers)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Password</td>
+                <td>@item.Email</td>
+                <td>
+                    <a asp-page="/BrokerCompany/EditBrokerAdmin" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="/BrokerCompany/BrokerDetails" asp-route-id="@item.Id">Details</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

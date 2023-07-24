@@ -1,0 +1,46 @@
+﻿@page
+@model StockAPI_Razor.Pages.User.IndexModel
+@{
+    ViewBag.Title = "Customer Content";
+}
+<div class="text-center">
+    <h1> Lets Get Lucky Stocks</h1>
+    <p>This is the page for customers!</p>
+</div>
+<div class="col-md-6">
+    <div class="page-info">
+        <img alt="picture of stock market" src="~/images/stock_market-1.jpg" />
+        <h3>Customer Options</h3>
+        <ul class="listOptions">
+            <a class="nav-link text-dark" asp-area="" asp-page="NewUser">Create Account</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="CreatePortfolio">Create Portfolio</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="ViewPortfolio">View Portfolio</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="GetCustomerId">View Customer Details</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="ViewStock">View Stock</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="BuyStock">Buy Stock</a>
+        </ul>
+        <button id="buyButton" class="btn btn-success">Buy</button>
+    </div>
+</div>
+<div>
+    <div id="loginToggle"> Login</div>
+    <form class="popup-form">
+        <div>
+            <label for="userName">Username:</label>
+            <br />
+            <input id="userName" />
+        </div>
+        <br />
+        <div>
+            <label for="password">Password:</label>
+            <br />
+            <input type="password" id="password" />
+        </div>
+        <br />
+        <div>
+            <input type="checkbox" />
+            <label for="rememberMe">Remember Me</label>
+        </div>
+        <input type="submit" value="Login" />
+    </form>
+</div>

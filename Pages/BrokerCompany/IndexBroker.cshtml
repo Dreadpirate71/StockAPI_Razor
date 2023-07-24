@@ -1,0 +1,50 @@
+﻿@page
+@model StockAPI_Razor.Pages.BrokerCompany.IndexModel
+@{
+    ViewBag.Title = "Company Page";
+}
+@{
+    ViewBag.Title = "Brokerage Company Content";
+}
+<div class="text-center">
+    <h1> Lets Get Lucky Stocks</h1>
+    <p>This is the page for brokerage company admins</p>
+</div>
+<div class="col-md-6">
+    <div class="page-info">
+        <img alt="picture of stock market" src="~/images/3617616-stock-market-abstract-business-concept-wallpaper--stock-photo-trading.jpg" height="400" />
+        <h3>Broker Admin Options</h3>
+        <ul class="listOptions">
+            <a class="nav-link text-dark" asp-area="" asp-page="GetCustomerId">View Customer Details</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="GetAllCustomers">View All Customers</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="LoadStockData">Load Stock Data</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="NewBrokerAdmin">Create Broker Account</a>
+            <a class="nav-link text-dark" asp-area="" asp-page="GetAllBrokers">View All Brokers</a>
+        </ul>
+        <button id="buyButton" class="btn btn-success">Buy</button>
+    </div>
+</div>
+<div>
+    <div id="loginToggle"> Login</div>
+    <form class="popup-form">
+        <div>
+            <label for="userName">Username:</label>
+            <br />
+            <input id="userName" />
+        </div>
+        <br />
+        <div>
+            <label for="password">Password:</label>
+            <br />
+            <input type="password" id="password" />
+        </div>
+        <br />
+        <div>
+            <input type="checkbox" />
+            <label for="rememberMe">Remember Me</label>
+        </div>
+        <input type="submit" value="Login" />
+    </form>
+    <br />
+    <br />
+</div>

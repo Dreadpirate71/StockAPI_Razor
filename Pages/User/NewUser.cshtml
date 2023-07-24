@@ -1,0 +1,72 @@
+﻿@page
+@model StockAPI_Razor.Pages.User.NewUserModel
+@{
+    ViewBag.Title = "New User Page";
+}
+<h1>This is for new users to create an account!</h1>
+
+@section Scripts {
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"></script>
+}
+
+<div class="col-md-6">
+    <form method="post">
+        <div asp-asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="NewUser.FirstName">First Name:</label>
+            <input asp-for="NewUser.FirstName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.LastName">Last Name:</label>
+            <input asp-for="NewUser.LastName" class="form-control" />
+            <span asp-validation-for="NewUser.LastName" class="text-warning"></span>
+        </div>
+        <div>
+            <label asp-for="NewUser.Address">Address:</label>
+            <input asp-for="NewUser.Address" class="form-control" />
+            <span asp-validation-for="NewUser.Address" class="text-warning"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.City">City:</label>
+            <input asp-for="NewUser.City" class="form-control" />
+            <span asp-validation-for="NewUser.City" class="text-warning"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.State">State:</label>
+            <input asp-for="NewUser.State" class="form-control" />
+            <span asp-validation-for="NewUser.State" class="text-warning"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.PostalCode">Postal Code:</label>
+            <input asp-for="NewUser.PostalCode" class="form-control" />
+            <span asp-validation-for="NewUser.PostalCode" class="text-warning"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.PhoneNumber">Phone Number:</label>
+            <input asp-for="NewUser.PhoneNumber" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.Email">Email</label>
+            <input asp-for="NewUser.Email" class="form-control" />
+            <span asp-validation-for="NewUser.Email" class="text-warning"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.Password">Password:</label>
+            <input asp-for="NewUser.Password" type="password" class="form-control" />
+            <span asp-validation-for="NewUser.Password" class="text-warning"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="NewUser.ConfirmPassword">Confirm Password:</label>
+            <input asp-for="NewUser.ConfirmPassword" type="password" class="form-control" />
+            <span asp-validation-for="NewUser.Password" class="text-warning"></span>
+            <br />
+        </div>
+        <div class="form-group">
+            <input type="submit" formtarget="/Shared/UserDetails" value="Create Account" class="btn btn-primary" />
+            <div class="text-success">@ViewBag.UserMessage</div>
+        </div>
+    </form>
+</div>

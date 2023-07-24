@@ -1,0 +1,43 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="col-md-12">
+    <div class="row">
+        <div class="stock-info">
+            <img alt="picture of stock market" src="~/images/6-best-stock-investing-strategies-to-use-during-a-bull-market.jpg" width="800" ; height="500" />
+            <h3>Stocks</h3>
+            <ul class="stockExchanges">
+                <li>New York Stock Exchange</li>
+                <li>Nasdaq Stock Exchange</li>
+                <li>American Stock Exchange</li>
+            </ul>
+            <button id="buyButton" class="btn btn-success">Buy</button>
+        </div>
+
+        <div>
+            <div id="loginToggle"> Login</div>
+            <form class="popup-form">
+                <div>
+                    <label for="userName">Username:</label>
+                    <br />
+                    <input id="userName" />
+                </div>
+                <br />
+                <div>
+                    <label for="password">Password:</label>
+                    <br />
+                    <input type="password" id="password" />
+                </div>
+                <br />
+                <div>
+                    <input type="checkbox" />
+                    <label for="rememberMe">Remember Me</label>
+                </div>
+                <input type="submit" value="Login" />
+            </form>
+        </div>
+    </div>
+</div>
